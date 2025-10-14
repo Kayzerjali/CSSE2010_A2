@@ -1,5 +1,5 @@
-.atlsn
-.xml
-.cproj
+A2_3.atlsn
+*.xml
+*.cproj
 .vs/
 Debug/
