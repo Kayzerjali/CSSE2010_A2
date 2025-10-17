@@ -1,5 +1,41 @@
 
-#ifndef 
+#ifndef CUSTOM_H_
+
+/* ===== PIN MAP ==== 
+
+A[0:7] SSD
+
+B0 -> S0
+B1 -> S1
+B2 -> B2
+B3 -> *
+B[4:7] -> SPI
+
+C[0:7] -> IO LED's
+
+D[0:1] -> USART
+D2 -> B0
+D3 -> B1
+
+
+*/
+
+/* ===== PORTS AND PINS ===== */
+
+// Switches
+#define SWITCH_DDR DDRB
+#define SWITCH_PIN PINB
+#define S0 0
+#define S1 1
+
+// IO BOARD LED 
+#define IO_LED_DDR DDRC
+#define IO_LED_PORT PORTC
+
+// SSD
+#define SSD_DDR DDRA
+#define SSD_PORT PORTA
+
 
 /* ===== ENUMS ===== */
 
@@ -37,6 +73,14 @@ typedef enum {
 	SSD_D = 0x5E
 	
 } SSD_SYMBOL;
+
+typedef struct {
+	
+	uint8_t DIGIT;
+	SSD_SYMBOL DIGIT0;
+	SSD_SYMBOL DIGIT1;
+	
+} SSD_STATE;
 
 
 
